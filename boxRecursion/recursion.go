@@ -32,14 +32,8 @@ func nameless(input boxable)  {
 }
 
 func CreateBoxes() Item {
-
-
-
-
 	rootBox := Item{isBox: true, name:"rootBox"}
-fmt.Println(reflect.TypeOf(rootBox))
-
-
+	fmt.Println(reflect.TypeOf(rootBox))
 
 	nameless(&rootBox)
 	box11 := Item{isBox: true, name:"box11"}
