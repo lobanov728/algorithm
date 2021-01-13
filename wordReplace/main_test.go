@@ -6,31 +6,31 @@ import (
 )
 
 func TestFirst(t *testing.T) {
-	if !reflect.DeepEqual(true, WordReplace("cat", "cat")) {
-		t.Error("cat and cut case")
-	}
-	
-	if !reflect.DeepEqual(true, WordReplace("cat", "cut")) {
-		t.Error("cat and cut case")
+	if !reflect.DeepEqual(true, WordReplace("first", "first")) {
+		t.Error("first and first case")
 	}
 
-	if !reflect.DeepEqual(false, WordReplace("cat", "cur")) {
-		t.Error("cat and cur case")
+	if !reflect.DeepEqual(true, WordReplace("first", "firsd")) {
+		t.Error("first and firsd case")
 	}
 
-	if !reflect.DeepEqual(true, WordReplace("cat", "at")) {
-		t.Error("cat and at case")
+	if !reflect.DeepEqual(false, WordReplace("first", "firzd")) {
+		t.Error("first and firzd case")
 	}
 
-	if !reflect.DeepEqual(true, WordReplace("cat", "cats")) {
-		t.Error("cat and cats case")
+	if !reflect.DeepEqual(true, WordReplace("first", "irst")) {
+		t.Error("first and irst case")
 	}
 
-	if !reflect.DeepEqual(false, WordReplace("cat", "dog")) {
-		t.Error("cat and dog case")
+	if !reflect.DeepEqual(true, WordReplace("first", "firsts")) {
+		t.Error("first and firsts case")
 	}
 
-	if !reflect.DeepEqual(true, WordReplace("cat你好", "cut你好")) {
-		t.Error("cat你好 and cut cut你好")
+	if !reflect.DeepEqual(false, WordReplace("firsts", "second")) {
+		t.Error("firsts and second case")
+	}
+
+	if !reflect.DeepEqual(true, WordReplace("first你好", "firsd你好")) {
+		t.Error("first你好 and firsd cut你好")
 	}
 }
