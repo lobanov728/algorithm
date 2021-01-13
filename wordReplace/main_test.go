@@ -6,6 +6,10 @@ import (
 )
 
 func TestFirst(t *testing.T) {
+	if !reflect.DeepEqual(true, WordReplace("cat", "cat")) {
+		t.Error("cat and cut case")
+	}
+	
 	if !reflect.DeepEqual(true, WordReplace("cat", "cut")) {
 		t.Error("cat and cut case")
 	}
@@ -27,6 +31,6 @@ func TestFirst(t *testing.T) {
 	}
 
 	if !reflect.DeepEqual(true, WordReplace("cat你好", "cut你好")) {
-		t.Error("cat and cut case")
+		t.Error("cat你好 and cut cut你好")
 	}
 }
