@@ -11,6 +11,7 @@ var dict = []string{
 	"h",
 	"ag",
 	"ca",
+	"clic",
 	"cl",
 	"c",
 	"sc",
@@ -18,7 +19,6 @@ var dict = []string{
 	"cd",
 	"li",
 	"fiance",
-	"clic",
 }
 
 // find elements of dictionary occurrences in a words
